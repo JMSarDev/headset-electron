@@ -9,7 +9,7 @@
     "player": "./bin/player-window",
     "production": "NODE_ENV=production electron .",
     "build:mac": "NODE_ENV=production NEW_VERSION=$npm_package_version ./bin/build-mac",
-    "dist": "build --publish onTagOrDraft"
+    "test": "build --publish onTagOrDraft"
   },
   "productName": "Headset",
   "author": "Daniel Ravina",
