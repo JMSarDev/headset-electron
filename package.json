@@ -1,22 +1,28 @@
 {
   "name": "Headset",
-  "version": "1.5.2",
+  "version": "1.5.4",
   "description": "Native Player for OSX",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "start": "NODE_ENV=development NODE_PATH=. nf start",
     "electron": "./node_modules/.bin/electron .",
     "player": "./bin/player-window",
     "production": "NODE_ENV=production electron .",
-    "build:mac": "NODE_ENV=production NEW_VERSION=$npm_package_version ./bin/build-mac"
+    "build:mac": "NODE_ENV=production NEW_VERSION=$npm_package_version ./bin/build-mac",
+    "dist": "build --publish onTagOrDraft"
   },
   "productName": "Headset",
   "author": "Daniel Ravina",
-  "dependencies": {
+  "mac": {
+    "category": "Multimedia"
+  },
+  "appId": "com.headsetapp.headsetapp",
+  "devDependencies": {
     "electron": "^1.6.2",
     "electron-default-menu": "^0.1.1",
     "electron-osx-sign": "^0.4.4",
     "electron-packager": "^7.0.2",
-    "iconutil": "^1.0.1"
+    "iconutil": "^1.0.1",
+    "electron-builder": "^17.5.0"
   }
 }
